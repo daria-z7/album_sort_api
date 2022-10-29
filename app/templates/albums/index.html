@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}
+  Информация об альбомах
+{% endblock %}
+{% block content %}
+    <table border='1px solid black', border-collapse='collapse', style='margin-left:auto;margin-right:auto;'>
+        <tr style="width: 259px; vertical-align: top;">
+          <th>album</th>
+          <th>
+            name
+            <p>
+              <button onclick="location.href='{% url 'albums:index' %}?sorting=name'">
+                sort
+              </button>
+            </p>
+          </th>
+          <th>
+            artist@name
+            <p>
+              <button onclick="location.href='{% url 'albums:index' %}?sorting=artist__name'">
+                sort
+              </button>
+            </p>
+          </th>
+          <th>tracks</th>
+        </tr>
+        {% for album in page_obj %}
+        <tr>
+          <td>{{ album }}</td>
+          <td>{{ album.name }}</td>
+          <td>{{ album.artist }}</td>
+          <td>
+            {% for track in album.tracks.all %}
+            <p>{{ track }}</p>
+            {% endfor %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+{% endblock %}
