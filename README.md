@@ -20,17 +20,16 @@ git clone 'ссылка на репозиторий'
 
 ```
 cd album_sort_api
-
 ```
 
 Cоздайте и активируйте виртуальное окружение:
 
 ```
-python -m venv env
+python -m venv venv
 ```
 
 ```
-source env/bin/activate
+source venv/bin/activate
 ```
 ```
 python -m pip install --upgrade pip
