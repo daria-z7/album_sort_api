@@ -49,7 +49,7 @@ python manage.py migrate
 Создайте суперпользователя:
 
 ```
-python manage.py creayesuperuser
+python manage.py createsuperuser
 ```
 
 Запустите проект:
