@@ -29,7 +29,7 @@ python -m venv venv
 ```
 
 ```
-source venv/bin/activate
+source venv/Scripts/activate
 ```
 ```
 python -m pip install --upgrade pip
